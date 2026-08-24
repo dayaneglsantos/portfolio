@@ -1,5 +1,11 @@
 import { motion } from 'motion/react'
-import { BookOpen, Code2, GraduationCap } from 'lucide-react'
+import {
+  BookOpen,
+  BriefcaseBusiness,
+  Code2,
+  GraduationCap,
+  MonitorPlay,
+} from 'lucide-react'
 
 const educationItems = [
   {
@@ -13,6 +19,16 @@ const educationItems = [
     featured: true,
   },
   {
+    type: 'Curso de especialização',
+    title: 'React e Next.js',
+    institution: 'Udemy',
+    period: 'Concluído em fev/2024 · 93 horas',
+    description:
+      'Aprofundamento prático no desenvolvimento de aplicações com React e Next.js, complementando minha formação no ecossistema front-end.',
+    icon: MonitorPlay,
+    featured: false,
+  },
+  {
     type: 'Formação profissional',
     title: 'Engenheiro Front-end',
     institution: 'EBAC — Escola Britânica de Artes Criativas e Tecnologia',
@@ -20,6 +36,16 @@ const educationItems = [
     description:
       'Formação prática em desenvolvimento de interfaces web, com HTML, CSS, JavaScript, React, TypeScript, responsividade e integração com APIs.',
     icon: Code2,
+    featured: false,
+  },
+  {
+    type: 'Graduação',
+    title: 'Administração',
+    institution: 'Faculdade Anhanguera de Brasília',
+    period: 'Concluído em 2015',
+    description:
+      'Formação em gestão, processos organizacionais e planejamento, contribuindo para uma visão mais ampla sobre produtos, negócios e trabalho em equipe.',
+    icon: BriefcaseBusiness,
     featured: false,
   },
 ]

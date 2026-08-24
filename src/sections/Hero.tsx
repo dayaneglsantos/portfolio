@@ -2,6 +2,7 @@ import { motion } from 'motion/react'
 import {
   ArrowDownRight,
   ContactRound,
+  Download,
   GitBranch,
   Mail,
   MapPin,
@@ -79,8 +80,15 @@ export function Hero() {
               Conheça meus projetos
               <ArrowDownRight size={18} aria-hidden="true" />
             </a>
-            <a className="button-secondary" href="mailto:dayaneglsantos@gmail.com">
-              Entre em contato
+            <a
+              className="button-secondary"
+              href="/cv-dayane-santos.pdf"
+              target="_blank"
+              rel="noreferrer"
+              download="CV-Dayane-Santos.pdf"
+            >
+              Baixar currículo
+              <Download size={18} aria-hidden="true" />
             </a>
           </div>
 
