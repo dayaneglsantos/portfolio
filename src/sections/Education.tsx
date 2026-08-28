@@ -65,7 +65,7 @@ export function Education() {
           transition={{ duration: 0.5 }}
         >
           <span className="font-mono text-xs tracking-[0.2em] text-violet-300 uppercase">
-            03 / Formação
+            Formação
           </span>
           <span className="h-px flex-1 bg-gradient-to-r from-violet-400/35 to-transparent" />
         </motion.div>
@@ -99,7 +99,7 @@ export function Education() {
               visible: { transition: { staggerChildren: 0.12 } },
             }}
           >
-            {educationItems.map((item, index) => {
+            {educationItems.map((item) => {
               const Icon = item.icon
 
               return (
@@ -112,9 +112,6 @@ export function Education() {
                   }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="education-index" aria-hidden="true">
-                    {String(index + 1).padStart(2, '0')}
-                  </div>
                   <div className="education-icon">
                     <Icon size={21} aria-hidden="true" />
                   </div>

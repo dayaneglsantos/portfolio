@@ -1,8 +1,8 @@
-import { motion } from 'motion/react'
-import { Braces, CodeXml, ServerCog, Wrench } from 'lucide-react'
-import { technologyGroups } from '../data/technologies'
+import { motion } from "motion/react";
+import { Braces, CodeXml, ServerCog, Wrench } from "lucide-react";
+import { technologyGroups } from "../data/technologies";
 
-const groupIcons = [CodeXml, ServerCog, Wrench]
+const groupIcons = [CodeXml, ServerCog, Wrench];
 
 export function About() {
   return (
@@ -19,12 +19,12 @@ export function About() {
           transition={{ duration: 0.5 }}
         >
           <span className="font-mono text-xs tracking-[0.2em] text-violet-300 uppercase">
-            01 / Sobre mim
+            Sobre mim
           </span>
-          <span className="h-px flex-1 bg-gradient-to-r from-violet-400/35 to-transparent" />
+          <span className="h-px flex-1 bg-linear-to-r from-violet-400/35 to-transparent" />
         </motion.div>
 
-        <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+        <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -49,16 +49,18 @@ export function About() {
               <p>
                 Gosto de compreender o contexto por trás de cada funcionalidade
                 e encontrar soluções que conciliem experiência do usuário,
-                organização do código e necessidades do produto. Minha evolução
-                de estagiária para desenvolvedora na Estudologia reforçou meu
-                interesse pelo aprendizado contínuo e pela construção de
-                produtos digitais com propósito.
+                organização do código e necessidades do produto. Também utilizo
+                ferramentas de IA como apoio ao desenvolvimento e ao
+                aprendizado, buscando mais eficiência sem abrir mão da
+                compreensão e da validação técnica das soluções. Minha evolução
+                como desenvolvedora reforçou meu interesse pelo aprendizado
+                contínuo e pela construção de produtos digitais com propósito.
               </p>
             </div>
           </motion.div>
 
           <motion.div
-            className="grid gap-4 sm:grid-cols-2"
+            className="grid content-start gap-4"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -68,12 +70,12 @@ export function About() {
             }}
           >
             {technologyGroups.map((group, index) => {
-              const Icon = groupIcons[index]
+              const Icon = groupIcons[index];
 
               return (
                 <motion.article
                   key={group.title}
-                  className={`technology-card ${index === 0 ? 'sm:col-span-2' : ''}`}
+                  className="technology-card"
                   variants={{
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0 },
@@ -85,14 +87,19 @@ export function About() {
                       <Icon size={19} aria-hidden="true" />
                     </span>
                     <div>
-                      <h3 className="font-semibold text-white">{group.title}</h3>
+                      <h3 className="font-semibold text-white">
+                        {group.title}
+                      </h3>
                       <p className="mt-1 text-sm leading-6 text-[#aaa2b5]">
                         {group.description}
                       </p>
                     </div>
                   </div>
 
-                  <ul className="mt-5 flex flex-wrap gap-2" aria-label={group.title}>
+                  <ul
+                    className="mt-5 flex flex-wrap gap-2"
+                    aria-label={group.title}
+                  >
                     {group.technologies.map((technology) => (
                       <li className="technology-tag" key={technology}>
                         {technology}
@@ -100,11 +107,11 @@ export function About() {
                     ))}
                   </ul>
                 </motion.article>
-              )
+              );
             })}
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }

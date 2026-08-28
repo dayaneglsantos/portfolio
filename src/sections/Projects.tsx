@@ -99,7 +99,7 @@ export function Projects() {
           transition={{ duration: 0.5 }}
         >
           <span className="font-mono text-xs tracking-[0.2em] text-violet-300 uppercase">
-            04 / Projetos
+            Projetos
           </span>
           <span className="h-px flex-1 bg-gradient-to-r from-violet-400/35 to-transparent" />
         </motion.div>

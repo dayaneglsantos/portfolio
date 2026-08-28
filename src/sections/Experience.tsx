@@ -1,29 +1,29 @@
-import { motion } from 'motion/react'
-import { ArrowUpRight, Building2, CalendarDays } from 'lucide-react'
+import { motion } from "motion/react";
+import { Building2, CalendarDays } from "lucide-react";
 
 const professionalTechnologies = [
-  'React',
-  'TypeScript',
-  'JavaScript',
-  'Next.js',
-  'Tailwind CSS',
-  'Material UI',
-]
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "Next.js",
+  "Tailwind CSS",
+  "Material UI",
+];
 
 const roles = [
   {
-    title: 'Desenvolvedora Front-end',
-    type: 'PJ',
-    period: 'abr/2026 — atual',
+    title: "Desenvolvedora Front-end",
+    type: "PJ",
+    period: "abr/2026 — atual",
     current: true,
   },
   {
-    title: 'Estagiária em Desenvolvimento Front-end',
-    type: 'Estágio',
-    period: 'abr/2024 — abr/2026',
+    title: "Estagiária em Desenvolvimento Front-end",
+    type: "Estágio",
+    period: "abr/2024 — abr/2026",
     current: false,
   },
-]
+];
 
 export function Experience() {
   return (
@@ -42,9 +42,9 @@ export function Experience() {
           transition={{ duration: 0.5 }}
         >
           <span className="font-mono text-xs tracking-[0.2em] text-violet-300 uppercase">
-            02 / Experiência
+            Experiência
           </span>
-          <span className="h-px flex-1 bg-gradient-to-r from-violet-400/35 to-transparent" />
+          <span className="h-px flex-1 bg-linear-to-r from-violet-400/35 to-transparent" />
         </motion.div>
 
         <motion.article
@@ -70,30 +70,25 @@ export function Experience() {
                 ensino e da aprendizagem.
               </p>
             </div>
-
-            <a
-              className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-violet-300 transition-colors hover:text-violet-200"
-              href="https://estudologia.com.br/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Conhecer a empresa
-              <ArrowUpRight size={16} aria-hidden="true" />
-            </a>
           </div>
 
           <div className="experience-content">
-            <ol className="experience-timeline" aria-label="Cargos na Estudologia">
+            <ol
+              className="experience-timeline"
+              aria-label="Cargos na Estudologia"
+            >
               {roles.map((role) => (
                 <li className="experience-role" key={role.title}>
                   <span
-                    className={`experience-marker ${role.current ? 'experience-marker-current' : ''}`}
+                    className={`experience-marker ${role.current ? "experience-marker-current" : ""}`}
                     aria-hidden="true"
                   />
                   <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
                     <div>
                       <div className="flex flex-wrap items-center gap-2.5">
-                        <h3 className="font-semibold text-white">{role.title}</h3>
+                        <h3 className="font-semibold text-white">
+                          {role.title}
+                        </h3>
                         <span className="rounded-md border border-white/8 bg-white/4 px-2 py-0.5 text-[0.65rem] font-medium text-[#aaa2b5]">
                           {role.type}
                         </span>
@@ -121,12 +116,6 @@ export function Experience() {
                 funcionalidades, correção de bugs e adaptação de telas para
                 diferentes dispositivos.
               </p>
-              <p>
-                Durante a fase inicial de um novo sistema, contribuí com a
-                implementação completa de diversas telas, participando desde a
-                estruturação dos componentes até a integração e os ajustes de
-                responsividade.
-              </p>
             </div>
 
             <ul
@@ -143,5 +132,5 @@ export function Experience() {
         </motion.article>
       </div>
     </section>
-  )
+  );
 }

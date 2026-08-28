@@ -1,24 +1,23 @@
 import { motion } from 'motion/react'
 import {
   ArrowDownRight,
-  ContactRound,
   Download,
-  GitBranch,
   Mail,
   MapPin,
   Rocket,
 } from 'lucide-react'
+import { GitHubIcon, LinkedInIcon } from '../components/BrandIcons'
 
 const socialLinks = [
   {
     label: 'GitHub',
     href: 'https://github.com/dayaneglsantos',
-    icon: GitBranch,
+    icon: GitHubIcon,
   },
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/dayaneglsantos/',
-    icon: ContactRound,
+    icon: LinkedInIcon,
   },
   {
     label: 'E-mail',
@@ -56,10 +55,19 @@ export function Hero() {
             </span>
           </div>
 
-          <p className="mb-3 flex items-center gap-2 font-medium text-violet-300">
-            <Rocket size={18} aria-hidden="true" />
-            Olá, eu sou a Dayane
-          </p>
+          <div className="mb-3 flex items-center justify-between gap-4">
+            <p className="flex items-center gap-2 font-medium text-violet-300">
+              <Rocket size={18} aria-hidden="true" />
+              Olá, eu sou a Dayane
+            </p>
+            <img
+              className="size-[4.5rem] shrink-0 rounded-2xl border border-violet-300/25 object-cover object-[50%_42%] shadow-[0_0_24px_rgba(139,92,246,0.16)] lg:hidden"
+              src="/dayane-santos.jpg"
+              alt="Dayane Santos sorrindo"
+              width="144"
+              height="144"
+            />
+          </div>
           <h1 className="max-w-4xl text-4xl leading-[1.08] font-semibold tracking-[-0.045em] text-balance text-white sm:text-6xl lg:text-7xl">
             Desenvolvedora{' '}
             <span className="text-gradient">React e TypeScript</span>
@@ -109,7 +117,7 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          className="relative mx-auto w-full max-w-[13rem] sm:max-w-[15rem] lg:mx-0 lg:ml-auto lg:max-w-[16.25rem]"
+          className="relative mx-auto hidden w-full max-w-[13rem] sm:max-w-[15rem] lg:ml-auto lg:block lg:max-w-[16.25rem]"
           initial={{ opacity: 0, scale: 0.94, x: 24 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.75, delay: 0.12, ease: 'easeOut' }}

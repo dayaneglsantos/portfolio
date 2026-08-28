@@ -280,23 +280,8 @@ button:focus-visible {
 }
 
 .education-list {
-  position: relative;
   display: grid;
   gap: 1rem;
-}
-
-.education-list::before {
-  position: absolute;
-  top: 3rem;
-  bottom: 3rem;
-  left: 1.05rem;
-  width: 1px;
-  content: '';
-  background: linear-gradient(
-    to bottom,
-    rgb(185 135 255 / 45%),
-    rgb(185 135 255 / 8%)
-  );
 }
 
 .education-item {
@@ -324,16 +309,6 @@ button:focus-visible {
     rgb(255 255 255 / 2%);
 }
 
-.education-index {
-  position: absolute;
-  top: 1rem;
-  right: 1.15rem;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  color: rgb(196 160 255 / 35%);
-}
-
 .education-icon {
   z-index: 1;
   display: grid;
@@ -351,10 +326,6 @@ button:focus-visible {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 1.25rem;
     padding: 1.6rem;
-  }
-
-  .education-list::before {
-    left: 1.3rem;
   }
 }
 
