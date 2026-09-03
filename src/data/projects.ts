@@ -64,12 +64,9 @@ export const projects: Project[] = [
       "Swagger",
       "Vitest e Supertest",
     ],
-    // Temporário: substituir pela URL pública do Swagger após o deploy da API.
-    liveUrl:
-      "https://github.com/dayaneglsantos/api_faculdade/blob/main/openapi.yml",
-    liveLabel: "Ver especificação",
+    liveUrl: "https://api-faculdade-production.up.railway.app/api-docs",
+    liveLabel: "Ver documentação",
     repositoryUrl: "https://github.com/dayaneglsantos/api_faculdade",
-    temporaryLiveUrl: true,
   },
   {
     title: "E-food",
